@@ -75,6 +75,7 @@ tabs.forEach(tab => {
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
+
 function scrollActive() {
     const scrollY = window.pageYOffset
 
