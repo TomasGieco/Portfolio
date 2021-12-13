@@ -527,11 +527,11 @@ scroll-header
 .skills__close .skills__list {
     height: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: .3s;
 }
 
 .skills__open .skills__list {
-    transition: 1s;
+    transition: .3s;
     height: max-content;
     margin-bottom: var(--mb-2-5);
 }
