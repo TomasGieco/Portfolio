@@ -22,6 +22,7 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --header-shadow-color: hsl(251deg 97% 64%);
     /* ======== Font and typography ======== */
     --body-font: 'Poppins', sans-serif;
     --big-font-size: 2rem;
@@ -61,6 +62,7 @@
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
+        --header-shadow-color: hsl(251deg 97% 64%);
     }
 }
 
@@ -77,6 +79,7 @@ body.dark-theme {
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+    --header-shadow-color: hsl(var(--hue-color), 97% ,64%);
 }
 
 
@@ -280,7 +283,7 @@ scroll-header
 /* Change background header */
 
 .scroll-header {
-    box-shadow: 0 -1px 4px var(--first-color-second);
+    box-shadow:  -1px 5px var(--header-shadow-color);
 }
 
 /*==================== HOME ====================*/
