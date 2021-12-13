@@ -507,17 +507,19 @@ scroll-header
 }
 
 .skills__html {
-    width: 40%;
-}
-
-.skills__css {
-    width: 30%;
-}
-
-.skills__js {
     width: 50%;
 }
 
+.skills__css {
+    width: 60%;
+}
+
+.skills__js {
+    width: 80%;
+}
+.skills__RR {
+    width: 50%;
+}
 .skills__cpp {
     width: 40%;
 }
@@ -525,9 +527,11 @@ scroll-header
 .skills__close .skills__list {
     height: 0;
     overflow: hidden;
+    transition: .5s;
 }
 
 .skills__open .skills__list {
+    transition: 1s;
     height: max-content;
     margin-bottom: var(--mb-2-5);
 }
