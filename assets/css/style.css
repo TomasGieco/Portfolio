@@ -517,11 +517,17 @@ scroll-header
 .skills__js {
     width: 80%;
 }
-.skills__RR {
+.skills__rr {
     width: 50%;
 }
 .skills__cpp {
     width: 40%;
+}
+.skills__njs {
+    width: 40%;
+}
+.skills__sql {
+    width: 20%;
 }
 
 .skills__close .skills__list {
@@ -905,7 +911,7 @@ textarea {
 /*
     TO DO
 
-    * Dropdown
+    * En Qualification, que el transform se active y mantenga cuando haces click, no cuando se hace hover
 
     * Intentar que el width de las barras de progreso avance cuando se abra
     
