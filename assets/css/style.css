@@ -100,6 +100,7 @@ body.dark-theme {
     color: var(--first-color);
 }
 
+/* ======== Dropdown Skills Menu ======== */
 
 /* ======== BASE ======== */
 
@@ -304,7 +305,7 @@ scroll-header
 }
 
 .home__social-icon {
-    font-size: 1.25rem;
+    font-size: 1.7rem;
     color: var(--first-color);
 }
 
@@ -382,12 +383,12 @@ scroll-header
 
 .button:hover {
     background-color: var(--first-color-alt);
+    transition: .3s;
 }
 
 .button__icon {
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
-    transition: .3s;
 }
 
 .button--flex {
@@ -483,7 +484,7 @@ scroll-header
 .skills__titles {
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--mb-0-5);
+    margin-bottom: var(--mb-0-25);
 }
 
 .skills__name {
@@ -495,6 +496,7 @@ scroll-header
 .skills__percentage {
     height: 5px;
     border-radius: .25rem;
+    margin-bottom: var(--mb-0-5);
 }
 
 .skills__bar {
@@ -509,11 +511,9 @@ scroll-header
 .skills__html {
     width: 50%;
 }
-
 .skills__css {
     width: 60%;
 }
-
 .skills__js {
     width: 80%;
 }
@@ -525,21 +525,47 @@ scroll-header
 }
 
 .skills__close .skills__list {
+    transition: .5s;
     height: 0;
     overflow: hidden;
-    transition: .5s;
+
 }
 
 .skills__open .skills__list {
-    transition: .5s;
-    height: max-content;
+    transition: .7s;
+    overflow: visible;
     margin-bottom: var(--mb-2-5);
 }
-
 .skills__open .skills__arrow {
     transform: rotate(-180deg);
 }
 
+.skills__open .skills__list ul.skills__dropdown li:nth-child(1){
+    animation: show 300ms forwards ease-in-out;
+}
+.skills__open .skills__list ul.skills__dropdown li:nth-child(2){
+    animation: show 500ms forwards ease-in-out;
+}
+.skills__open .skills__list ul.skills__dropdown li:nth-child(3){
+    animation: show 700ms forwards ease-in-out;
+}
+.skills__open .skills__list ul.skills__dropdown li:nth-child(4){
+    animation: show 900ms forwards ease-in-out;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    80%{
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 /*==================== QUALIFICATION ====================*/
 
@@ -874,3 +900,19 @@ textarea {
         grid-template-columns: repeat(2,1fr);
     }
 }
+
+
+/*
+    TO DO
+
+    * Dropdown
+
+    * Intentar que el width de las barras de progreso avance cuando se abra
+    
+    * Cambiar las fotos
+
+    * Agregar que estoy en Henry
+
+    * Hacer funcional el formulario
+*/
+
