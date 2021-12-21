@@ -723,6 +723,7 @@ textarea {
 
 #status.success {
     background-color: var(--first-color);
+    color: white;
     animation: status 4s ease forwards;
 }
 
@@ -735,15 +736,15 @@ textarea {
 @keyframes status {
     0% {
         opacity: 1;
-        pointer-events: all;
+        
     }
     90% {
         opacity: 1;
-        pointer-events: all;
+        
     }
     100% {
         opacity: 0;
-        pointer-events: none;
+        visibility: hidden;
     }
 }
 

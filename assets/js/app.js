@@ -147,13 +147,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function success() {
         form.reset();
-        status.innerHTML = "Thanks!";
         status.classList.add("success");
+        status.innerHTML = "Thanks!";
+        setTimeout(() => { status.classList.remove("success"); status.innerHTML = ""; }, 5000);
     }
 
     function error() {
         status.classList.add("error");
         status.innerHTML = "Oops, There was a problem!";
+        setTimeout(() => { status.classList.remove("error"); status.innerHTML = ""; }, 5000);
     }
 
     form.addEventListener("submit", (ev) => {
