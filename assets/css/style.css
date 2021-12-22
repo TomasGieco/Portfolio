@@ -558,7 +558,6 @@ scroll-header
 .skills__open .skills__list ul.skills__dropdown li:nth-child(4){
     animation: show 900ms forwards ease-in-out;
 }
-
 @keyframes show{
     0%{
         opacity: 0;
@@ -585,10 +584,7 @@ scroll-header
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     cursor: pointer;
-}
-
-.qualification__button:hover {
-    color: var(--first-color);
+    
 }
 
 .qualification__icon {
@@ -597,9 +593,25 @@ scroll-header
     margin-right: var(--mb-0-25);
 }
 
-.qualification__icon:hover {
-    transform: translateY(-1rem) rotateX(6.142rad);;
-    transition: .3s;
+.qualification__color{
+    color: var(--first-color);
+}
+
+.qualification__active .qualification__icon {
+    animation: bounce 1000ms forwards ease-in-out;
+}
+
+@keyframes bounce{
+    0%{
+        
+        transform: translateY(-0.5rem) rotateX(6.142rad);
+    }
+    50%{
+        transform: translateY(-1rem)
+    }
+    100%{
+        transform: translateY(0rem);
+    }
 }
 
 .qualification__data {
@@ -955,11 +967,8 @@ textarea {
 
 /*
     TO DO
-
-    * En Qualification, que el transform se active y mantenga cuando haces click, no cuando se hace hover
     
     * Cambiar las fotos
 
-    * Agregar que estoy en Henry
 */
 

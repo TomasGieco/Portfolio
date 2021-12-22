@@ -50,10 +50,8 @@ skillsHeader.forEach((el) => {
     el.addEventListener("click", toggleSkills);
 });
 /*==================== QUALIFICATION TABS ====================*/
-
 const tabs = document.querySelectorAll("[data-target]"),
     tabContents = document.querySelectorAll("[data-content]");
-
 
 tabs.forEach(tab => {
     tab.addEventListener("click", () => {
@@ -63,12 +61,17 @@ tabs.forEach(tab => {
             tabContent.classList.remove("qualification__active");
         });
         target.classList.add("qualification__active");
-
-        tab.forEach(tab => {
-            tab.classList.remove("qualification__active");
-        });
-
-        tab.classList.add("qualification__active");
+        if (tab === tabs[0]) {
+            tabs[0].classList.add("qualification__active");
+            tabs[0].classList.add("qualification__color");
+            tabs[1].classList.remove("qualification__active");
+            tabs[1].classList.remove("qualification__color");
+        } else {
+            tabs[1].classList.add("qualification__active");
+            tabs[1].classList.add("qualification__color");
+            tabs[0].classList.remove("qualification__active");
+            tabs[0].classList.remove("qualification__color");
+        }
     });
 });
 
