@@ -81,6 +81,8 @@ body.dark-theme {
     --header-shadow-color: hsl(var(--hue-color), 12%, 4%);
 }
 
+body
+
 
 /* ======== Button dark/light ======== */
 
@@ -139,6 +141,20 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+body .background{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-image: url("https://andreivictor.ro/codepen/background-grain-effect/noise.gif");
+    background-repeat: repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body.dark-theme .background{
+    opacity: 0.03;
 }
 
 
@@ -448,7 +464,6 @@ scroll-header
 .skills__header {
     display: flex;
     align-items: center;
-    margin-bottom: var(--mb-2-5);
     cursor: pointer;
 }
 
@@ -490,6 +505,12 @@ scroll-header
 .skills__name {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+    /* color: var(--body-color); */
+}
+
+.skills__name__animated {
+    transition: .5s;
+    color: var(--first-color);
 }
 
 .skills__bar,
@@ -558,6 +579,21 @@ scroll-header
 .skills__open .skills__list ul.skills__dropdown li:nth-child(4){
     animation: show 900ms forwards ease-in-out;
 }
+.skills__open .skills__list ul.skills__dropdown li:nth-child(5){
+    animation: show 1100ms forwards ease-in-out;
+}
+.skills__open .skills__list ul.skills__dropdown li:nth-child(6){
+    animation: show 1300ms forwards ease-in-out;
+}
+.skills__open .skills__list ul.skills__dropdown li:nth-child(7){
+    animation: show 1500ms forwards ease-in-out;
+}
+.skills__open .skills__list ul.skills__dropdown li:nth-child(8){
+    animation: show 1700ms forwards ease-in-out;
+}
+
+
+
 @keyframes show{
     0%{
         opacity: 0;
@@ -662,6 +698,11 @@ scroll-header
 
 
 /*==================== CONTACT ME ====================*/
+
+.contact{
+    margin-bottom: 8rem;
+
+}
 
 .contact__container {
     row-gap: 3rem;
@@ -963,12 +1004,3 @@ textarea {
         grid-template-columns: repeat(2,1fr);
     }
 }
-
-
-/*
-    TO DO
-    
-    * Cambiar las fotos
-
-*/
-

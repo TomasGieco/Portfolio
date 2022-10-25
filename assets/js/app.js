@@ -32,7 +32,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName("skills__content"),
-    skillsHeader = document.querySelectorAll(".skills__header");
+    skillsHeader = document.querySelectorAll(".skills__header"),
+    skillsName = document.querySelectorAll(".skills__name");
 
 function toggleSkills() {
     let itemClass = this.parentNode.className;
@@ -44,11 +45,17 @@ function toggleSkills() {
     if (itemClass === "skills__content skills__close") {
         this.parentNode.className = "skills__content skills__open";
     }
+
+    // for (var i = 0; i < skillsName.length; i++) {
+    //     skillsName[i].className="skills__name skills__name__animated";
+    // }
 }
 
 skillsHeader.forEach((el) => {
     el.addEventListener("click", toggleSkills);
 });
+
+
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll("[data-target]"),
     tabContents = document.querySelectorAll("[data-content]");
@@ -82,14 +89,16 @@ function scrollActive() {
     const scrollY = window.pageYOffset
 
     sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
         const sectionId = current.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+
         } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+
         }
     })
 }
@@ -147,6 +156,7 @@ themeButton.addEventListener('click', () => {
 window.addEventListener("DOMContentLoaded", () => {
     var form = document.getElementById("form");
     var status = document.getElementById("status");
+
 
     function success() {
         form.reset();
