@@ -81,9 +81,6 @@ body.dark-theme {
     --header-shadow-color: hsl(var(--hue-color), 12%, 4%);
 }
 
-body
-
-
 /* ======== Button dark/light ======== */
 
 .nav__btns {

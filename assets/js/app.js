@@ -192,3 +192,29 @@ function ajax(method, url, data, success, error) {
     };
     xhr.send(data);
 }
+
+/*=============== SCROLL ANIMATION ===============*/
+
+$(".nav__home").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#home").offset().top
+    }, 500);
+});
+
+$(".nav__about").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#about").offset().top
+    }, 500);
+});
+
+$(".nav__skills").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#skills").offset().top
+    }, 500);
+});
+
+$(".nav__contact").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#contact").offset().top
+    }, 500);
+});
